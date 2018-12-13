@@ -17,6 +17,6 @@ defineSupportCode(({Given, When, Then, Before}) => {
 
   Then('I should see some results in the search overlay',
     () => app.getSearchResultItems()
-      .then(elems => expect(elems.length).to.be.greaterThan(0)));
+      .then(elems => expect(elems.length).to.be.greaterThan(100)));
 
 });
