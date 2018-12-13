@@ -22,6 +22,16 @@ exports.config = {
   framework: 'custom',
   frameworkPath: require.resolve('protractor-cucumber-framework'),
 
+  plugins: [{
+    inline: {
+      postTest: function(passed, testInfo) {
+        console.log();
+        console.log(JSON.stringify(testInfo) + ", passed: " + passed);
+        console.log();
+      }
+    }
+  }],
+
   // cucumber command line options
   cucumberOpts: {
     // require step definition files before executing features
